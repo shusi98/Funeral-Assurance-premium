@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags --> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin | Manage Reports</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css"/>
+  <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars-o.css">
+  <link rel="stylesheet" href="vendors/jquery-bar-rating/fontawesome-stars.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="CSS/styleADM.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="#"><img src="" alt=""/></a>
+        <a class="navbar-brand brand-logo-mini" href="#"><img src="" alt=""/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Search Projects.." aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+            
+          <div class="log" style="position: relative;display:flex;top:20px;">
+            <i class="fa fa-sign-out" aria-hidden="true"></i><label onclick="signOutL()">Logout</label>
+          </div>
+      
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <br><br><br><br>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="icon-box menu-icon"></i>
+              <span class="menu-title">Home</span>
+            </a>
+          </li>
+         
+          <li class="nav-item " >
+            <a class="nav-link" href="manageUsers.html">
+              <i class="icon-file menu-icon"></i>
+              <span class="menu-title current">Manage Users</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="manageBodyReports.html">
+              <i class="icon-pie-graph menu-icon"></i>
+              <span class="menu-title">Manage Body Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="icon-command menu-icon"></i>
+              <span class="menu-title">Manage Payments</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="manageClaim.html">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Manage Claims</span>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="managePremiums.html">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">Manage Premiums</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="manageComments.html">
+              <i class="icon-book menu-icon"></i>
+              <span class="menu-title">Manage Comments</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-sm-12 mb-4 mb-xl-0">
+              <h4 class="font-weight-bold text-dark">Manage Claims</h4>
+              <p class="font-weight-normal mb-2 text-muted"></p>
+            </div>
+          </div>
+         
+            <div class="col-xl-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                 
+                  <div class="card-body">
+                      
+                    <table class="table">
+                      <thead>
+                        <tr>
+                        <th scope="col">Claimer Email</th>
+                        <th scope="col">Claimer Cell</th>
+                        <th scope="col">Name of Deceased</th>
+                        <th scope="col">Surname of Deceased</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Relationship</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">status</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="table-info">
+                        <tr>
+                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>No Records</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                       
+                      </tbody>
+                      </table>
+                      
+                      
+                        
+                     
+                      <div class="modal fade" id="myModal2">
+                        <div class="modal-dialog modal-xl">
+                          <div class="modal-content">
+                          
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="modal-title">Update User profile</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                            <div>
+                              <div class="form-row">
+                                <select class="form-select form-group" aria-label="Default select example" id="statOptions">
+                                  <option selected>Choose</option>
+                                  <option value="Seen">Seen</option>
+                                  <option value="On our way">On our way</option>
+                                  <option value="Done">Done</option>
+                            
+                                </select>
+                                
+                                <button type="submit" class="btn btn-primary" onclick=" updateStatus()">Update</button>
+                              
+                            </div>
+                            
+                          </div>
+                          
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                           
+                          </div>
+                          
+                          </div>
+                        </div>
+                        </div>
+                        
+                      </div>
+                    
+                </div>
+            </div>
+         
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Maluleke funeral parlor 2022</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> get <a href="https://www.bootstrapdash.com/" target="_blank">insurance services</a> at affordable price</span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+		
+		<script >
+			// Import the functions you need from the SDKs you need
+		  
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+		  
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+  apiKey: "AIzaSyAjWOHxphpl0GlqRTGD4c1CyRbk1FtRIZg",
+  authDomain: "funeral-parlor-f711d.firebaseapp.com",
+  projectId: "funeral-parlor-f711d",
+  storageBucket: "funeral-parlor-f711d.appspot.com",
+  messagingSenderId: "669365654558",
+  appId: "1:669365654558:web:0379101a820782b772ca0f",
+  measurementId: "G-G9LEL9JP08"
+};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			const auth = firebase.auth();
+			const db = firebase.firestore();
+			db.settings({timestampsInSnapshots:true});
+			firebase.analytics();
+		  </script>
+	  
+	
+	  <script src="https://kit.fontawesome.com/8f7c71be78.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+s
+  <!-- base:js -->
+  <script src="vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+ <script src="js/manageClaims.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
