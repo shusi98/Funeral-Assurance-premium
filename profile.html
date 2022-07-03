@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Insurance | Insurances type</title>
+
+		<!-- Loading third party fonts -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+        
+		<link rel="stylesheet" href="style.css">
+      
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+		<div id="site-content">
+			<header class="site-header">
+				<div class="top-header">
+					<div class="container">
+						<a href="index.html" id="branding">
+							<img src="images/logo.png" alt="Company Name" class="logo">
+							<div class="logo-text">
+								<h1 class="site-title">Maluleke Funeral Parlor</h1>
+								<small class="description">We deliver with passion</small>
+							</div>
+						</a> <!-- #branding -->
+					
+						
+					</div> <!-- .container -->
+				</div> <!-- .top-header -->
+
+				
+				<div class="bottom-header">
+					<div class="container">
+						<div class="main-navigation">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item "><a href="home.html">Dashboard</a></li>
+								<li class="menu-item current-menu-item"><a href="profile.html">Profile</a></li>
+								<li class="menu-item "><a href="addMembers.html">Members</a></li>
+								<li class="menu-item"><a href="reportBody.html">Report Deceased</a></li>
+								<li class="menu-item"><a href="#">Claims</a></li>
+								<li class="menu-item"><a href="trackClaimstatus.html">Claims Status</a></li>
+								<li class="menu-item "><a href="payments.html">Payments</a></li>
+							
+								<button type="button" class="btn btn-light" onclick="signOutL()">SignOut</button>
+							</ul> <!-- .menu -->
+						</div> <!-- .main-navigation -->
+				
+						
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+				
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="home.html">Home</a>
+						<span>Profile</span>
+					</div>
+				</div>
+
+				<div class="page">
+                    <div class="container bootstrap snippet">
+                       
+                        <div class="row">
+                              <div class="col-md-3">
+                    
+                                   
+                             
+                              
+                            </div><!--/col-3-->
+                            <div class="col-sm-9">
+            
+                    
+                                  
+                              <div  class="tab-content">
+                                <div class="tab-pane active" id="home">
+                                    <hr>
+                                      <div style="position: relative; left: -15%; justify-content: center;background: #66634b; z-index: 5;"  class="form" action="##" method="post" id="registrationForm">
+                                          <div class="form-group">
+                                              
+                                              <div class="col-xs-6">
+                                                  <label ><h4>First name</h4></label>
+                                                  <input type="text" class="form-control"  id="first_name" placeholder="first name" title="enter your first name if any.">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                              
+                                              <div class="col-xs-6">
+                                                <label ><h4>Last name</h4></label>
+                                                  <input type="text" class="form-control" id="last_name" placeholder="last name" title="enter your last name if any.">
+                                              </div>
+                                          </div>
+                              
+                                          <div class="form-group">
+                                              
+                                              <div class="col-xs-6">
+                                                  <label ><h4>Phone</h4></label>
+                                                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                                              </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-xs-6"><h4>Address</h4></label>
+                                            <textarea  class="form-control col-xs-6" id="phoneADD" rows="3"></textarea>
+                                          </div>
+                                         
+                                       
+                                          <div class="form-group">
+                                               <div class="col-xs-12">
+                                                    <br>
+                                                      <button style="position: relative;display:flex;background-color: rgb(33, 113, 233);left: 0%;" class="btn btn-lg btn-success" type="button" onclick="updateProfile()"><i class="glyphicon glyphicon-ok-sign"></i> save Changes</button>
+													
+                                                       
+                                                </div>
+                                          </div>
+                                        </div>
+                                  
+                                  <hr>
+                                  
+                                 </div><!--/tab-pane-->
+                              
+                               
+                                   
+                                  </div><!--/tab-pane-->
+                              </div><!--/tab-content-->
+                </div>
+					
+            </div>
+		
+				</div> <!-- .page -->
+			</main>
+
+			<div class="site-footer">
+				<div class="widget-area">
+				
+				</div>
+
+				<div class="bottom-footer">
+					<div class="container">
+						
+						<div class="colophon">Copyright 2022 Malulke funeral paulor. All rights reserved</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+		
+		<script >
+			// Import the functions you need from the SDKs you need
+		  
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+		  
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+  apiKey: "AIzaSyAjWOHxphpl0GlqRTGD4c1CyRbk1FtRIZg",
+  authDomain: "funeral-parlor-f711d.firebaseapp.com",
+  projectId: "funeral-parlor-f711d",
+  storageBucket: "funeral-parlor-f711d.appspot.com",
+  messagingSenderId: "669365654558",
+  appId: "1:669365654558:web:0379101a820782b772ca0f",
+  measurementId: "G-G9LEL9JP08"
+};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			const auth = firebase.auth();
+			const db = firebase.firestore();
+			db.settings({timestampsInSnapshots:true});
+			firebase.analytics();
+		  </script>
+	  
+	
+	  <script src="https://kit.fontawesome.com/8f7c71be78.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/profile.js"></script>
+		
+	</body>
+
+</html>
